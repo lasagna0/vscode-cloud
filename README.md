@@ -28,24 +28,27 @@ Download all files needed to install vscode-server from this repo. Creds to @git
 git clone "https://github.com/lasagna0/vscode-cloud.git"
 ```
 
-Then run your instance of with the following code vscode-server, this should be avaliable in `your-ip:3000'
+Then run your instance of with the following code, this should be avaliable in `your-ip:3000'
 ```
-docker run -it --init -p 3000:3000 -v "$(pwd):/home/workspace:cached" gitpod/openvscode-server
+cd vscode-cloud
+sudo docker run -it --init -p 3000:3000 -v "$(pwd):/home/workspace:cached" gitpod/openvscode-server
 ```
 
+Then inside vscode instance, run
+```
 sudo apt install python3-pip
 pip3 install -U radian
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
 sudo apt-get update
 sudo apt-get install r-base
-Install in R, languageserver. This must be installed in order to use R in vscode
 ```
-R 
+Then inside R console
+```
 install.packages("languageserver")
 install.packages("httpgd")
+install.packages("rmarkdown")
+
 ```
 
-Download all files needed to install vscode-server from this repo. Creds to @gitpod-io for Docker files
-
-
+And done!
