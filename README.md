@@ -31,8 +31,9 @@ git clone "https://github.com/lasagna0/vscode-cloud.git"
 Then run your instance of with the following code, this should be avaliable in `your-ip:3000'
 ```
 cd vscode-cloud
-nohup sudo docker run -it --init -p 3000:3000 -v "$(pwd):/home/workspace:cached" gitpod/openvscode-server --connection-token YOURTOKEN &
+nohup ./miscript.sh &
 ```
+Change
 
 Then inside vscode instance, run
 ```
