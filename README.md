@@ -31,7 +31,7 @@ git clone "https://github.com/lasagna0/vscode-cloud.git"
 Then run your instance of with the following code, this should be avaliable in `your-ip:3000'
 ```
 cd vscode-cloud
-nohup ./run.sh &
+screen -L ./run.sh
 ```
 Change
 
