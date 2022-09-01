@@ -2,9 +2,9 @@
 Dump to load vscode server in Ubuntu Azure Server
 
 
-Hello there! With this repo, you can upload all necessary files to activate a vscode server with simple steps. 
+Hello there! With this repo, you will have a easy guide of how to setup a vscode server.
 
-This repo contains the following extensions and configs:
+This repo contains installation of the following extensions and configs:
 
 * Python 
 
@@ -25,10 +25,13 @@ sudo apt install git
 ```
 Download all files needed to install vscode-server from this repo. Creds to @gitpod-io for Docker files
 ```
-
+git clone "https://github.com/lasagna0/vscode-cloud.git"
 ```
 
-
+Then run your instance of with the following code vscode-server, this should be avaliable in `your-ip:3000'
+```
+docker run -it --init -p 3000:3000 -v "$(pwd):/home/workspace:cached" gitpod/openvscode-server
+```
 
 sudo apt install python3-pip
 pip3 install -U radian
