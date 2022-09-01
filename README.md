@@ -39,7 +39,7 @@ Change
 Then inside vscode instance, run
 ```
 pip3 install -U radian
-sudo yum R4
+sudo amazon-linux-extras install R4
 ```
 Then inside R console
 ```
